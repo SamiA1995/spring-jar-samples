@@ -55,7 +55,7 @@ public class DemoApplication {
 			String[] result = queue_manager_queue_count.get(i).split(" ");
 			currentDepth += Integer.parseInt(result[2]);
 		}
-		return String.valueOf(currentDepth);
+		return ("{\"put_count\":\"" + currentDepth + "\"}");
 	}
 
 	private ArrayList<String> scanAMQSMON(String date, String[][] servers_queue_managers, String environment) throws FileNotFoundException {
